@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   const handle_forgot_username = () => {
-    router.push('/forgot-username');
+    router.push("/forgot-username");
   };
 
   return (
@@ -34,7 +34,7 @@ export default function Home() {
 
           <button
             className="p-3 text-white bg-blue-500 rounded-md hover:bg-blue-600"
-            onClick={() => alert('Login functionality not implemented')}
+            onClick={() => alert("Login functionality not implemented")}
           >
             Sign in
           </button>
@@ -45,7 +45,7 @@ export default function Home() {
               <span className="text-gray-600">Don't have an account? </span>
               <button 
                 className="text-blue-500 hover:text-blue-700 hover:underline"
-                onClick={() => router.push('/signup')}
+                onClick={() => router.push("/signup")}
               >
                 Sign up
               </button>
