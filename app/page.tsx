@@ -23,36 +23,39 @@ export default function Home() {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden">
-      {/* Main content */}
+      {/* Main content (clean sign up) */}
       <div className="flex flex-col items-center justify-center w-full h-full">
-        <div className="flex flex-col gap-2 p-8 rounded-lg">
-          <input className="p-1 border" placeholder="Username"></input>
-          <input
-            className="p-1 border"
-            type="password"
-            placeholder="Password"
-          ></input>
-          <button className="bg-blue-400 rounded-md">Login</button>
-          
+        <div className="flex flex-col w-full max-w-md gap-4 p-8 rounded-lg">
+          <h1 className="mb-4 text-2xl font-bold text-center">Sign in to your account</h1>
+          <p className="mb-4 text-center text-gray-600">Welcome back</p>
+
+          <input className="p-3 border rounded-md" placeholder="Username"></input>
+          <input className="p-3 border rounded-md" type="password" placeholder="Password"></input>
+
+          <button
+            className="p-3 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+            onClick={() => alert('Login functionality not implemented')}
+          >
+            Sign in
+          </button>
+
           {/* Authentication links */}
           <div className="flex flex-col gap-2 mt-4 text-sm">
             <div className="text-center">
-              <span className="text-gray-600">Already have an account? </span>
-              <button className="text-blue-500 hover:text-blue-700 hover:underline">
-                Sign in
-              </button>
-            </div>
-            
-            <div className="flex justify-between">
+              <span className="text-gray-600">Don't have an account? </span>
               <button 
                 className="text-blue-500 hover:text-blue-700 hover:underline"
-                onClick={handle_forgot_username}
+                onClick={() => router.push('/signup')}
               >
+                Sign up
+              </button>
+            </div>
+
+            <div className="flex justify-between">
+              <button className="text-blue-500 hover:text-blue-700 hover:underline" onClick={handle_forgot_username}>
                 Forgot username
               </button>
-              <button className="text-blue-500 hover:text-blue-700 hover:underline">
-                Forgot password
-              </button>
+              <button className="text-blue-500 hover:text-blue-700 hover:underline">Forgot password</button>
             </div>
           </div>
         </div>
