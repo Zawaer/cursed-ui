@@ -8,9 +8,116 @@ const col2 = ["octo", "em", "uly", "a", "une", "an"];
 const col3 = ["ber", "y", "uary", "rch", "pril", "ugust"];
 
 // PASTE YOUR TERMS OF SERVICE TEXT HERE:
-const TERMS_OF_SERVICE_TEXT = `
+const TERMS_OF_SERVICE_TEXT = `TERMS OF SERVICE AGREEMENT
 
-`;
+Last Updated: October 1, 2025
+
+PLEASE READ THESE TERMS OF SERVICE CAREFULLY BEFORE USING OUR WEBSITE OR SERVICES. BY ACCESSING OR USING OUR SERVICES, YOU AGREE TO BE BOUND BY THESE TERMS.
+
+1. ACCEPTANCE OF TERMS
+
+By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. Additionally, when using this website's particular services, you shall be subject to any posted guidelines or rules applicable to such services.
+
+2. DESCRIPTION OF SERVICE
+
+Our service provides users with access to a rich collection of resources, including various communications tools, forums, shopping services, search services, and personalized content through its network of properties which may be accessed through any various medium or device now known or hereafter developed.
+
+3. USER ACCOUNTS AND REGISTRATION
+
+To access certain features of our service, you must register for an account. When you register for an account, you may be required to provide us with some information about yourself, such as your name, email address, or other contact information. You agree that the information you provide to us is accurate and that you will keep it accurate and up-to-date at all times.
+
+4. PRIVACY POLICY
+
+Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information when you use our service. By using our service, you agree that we can use your data in accordance with our Privacy Policy.
+
+5. USER CONTENT AND CONDUCT
+
+You are solely responsible for the content and information that you post, upload, or display on or through the service. You agree that you will not use the service to upload, post, transmit or otherwise make available any content that is unlawful, harmful, threatening, abusive, harassing, tortious, defamatory, vulgar, obscene, libelous, invasive of another's privacy, hateful, or racially, ethnically or otherwise objectionable.
+
+6. INTELLECTUAL PROPERTY RIGHTS
+
+The service and its original content, features, and functionality are and will remain the exclusive property of our company and its licensors. The service is protected by copyright, trademark, and other laws. Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.
+
+7. PROHIBITED USES
+
+You may not use our service for any illegal or unauthorized purpose nor may you, in the use of the service, violate any laws in your jurisdiction. You may not use our service to transmit, or procure the sending of, any advertising or promotional material without our prior written consent.
+
+8. TERMINATION
+
+We may terminate or suspend your account and bar access to the service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.
+
+9. DISCLAIMERS
+
+The information on this website is provided on an "as is" basis. To the fullest extent permitted by law, this Company excludes all representations, warranties, conditions and terms whether express or implied, statutory or otherwise.
+
+10. LIMITATION OF LIABILITY
+
+In no event shall our company, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the service.
+
+11. GOVERNING LAW
+
+These Terms shall be interpreted and governed by the laws of the State of California, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.
+
+12. CHANGES TO TERMS
+
+We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
+
+13. CONTACT INFORMATION
+
+Questions about the Terms of Service should be sent to us at legal@ourcompany.com.
+
+14. ADDITIONAL TERMS FOR SPECIFIC SERVICES
+
+Certain features or services may be subject to additional terms and conditions, which will be posted in connection with such features or services. Your use of such features or services is subject to those additional terms.
+
+15. DIGITAL MILLENNIUM COPYRIGHT ACT
+
+We respect the intellectual property rights of others and expect our users to do the same. We will respond to notices of alleged copyright infringement that comply with the Digital Millennium Copyright Act.
+
+16. ELECTRONIC COMMUNICATIONS
+
+When you use the service or send emails to us, you are communicating with us electronically. You consent to receive communications from us electronically, and you agree that all agreements, notices, disclosures, and other communications satisfy any legal requirement that such communications be in writing.
+
+17. MOBILE SERVICES
+
+Our service may include certain features that are available via your mobile device. These features may include the ability to upload content, receive messages, and download applications to your mobile device. Standard messaging, data, and other fees may apply.
+
+18. THIRD-PARTY LINKS
+
+Our service may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
+
+19. INDEMNIFICATION
+
+You agree to defend, indemnify, and hold harmless our company and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses.
+
+20. SEVERABILITY
+
+If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+
+21. WAIVER
+
+Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. The waiver of any such right or provision will be effective only if in writing and signed by a duly authorized representative of our company.
+
+22. ENTIRE AGREEMENT
+
+These Terms constitute the entire agreement between you and our company regarding our service, and supersede and replace any prior agreements we might have between us regarding the service.
+
+23. ASSIGNMENT
+
+These Terms, and any rights and licenses granted hereunder, may not be transferred or assigned by you, but may be assigned by us without restriction. Any attempted transfer or assignment in violation hereof shall be null and void.
+
+24. SURVIVAL
+
+All provisions of these Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
+
+25. FORCE MAJEURE
+
+We shall not be liable for any failure to perform our obligations under these Terms if such failure results from circumstances beyond our reasonable control, including but not limited to acts of God, war, terrorism, or natural disasters.
+
+This agreement is effective unless and until terminated by either you or us. You may terminate this agreement at any time by discontinuing use of the service and destroying all materials obtained from it. We may terminate this agreement at any time without notice if we believe you have violated any provision of this agreement.
+
+By continuing to use our service, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.`;
+
 
 export default function SignupMonthPicker() {
   const router = useRouter();
@@ -368,7 +475,7 @@ export default function SignupMonthPicker() {
                 onClick={() => {
                   if (terms_accepted && birth_date && verification_code === generated_code) {
                     // Complete signup process
-                    alert(`Signup complete! Birth month: ${selected_month}, Birth date: ${birth_date}, Phone: ${phone_number.toString().replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3')}`);
+                    alert('Someyhing went wrong! Please try again.');
                     router.push('/');
                   } else {
                     set_error('Please complete all steps including accepting terms of service.');
