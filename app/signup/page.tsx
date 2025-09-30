@@ -475,7 +475,7 @@ export default function SignupMonthPicker() {
                 onClick={() => {
                   if (terms_accepted && birth_date && verification_code === generated_code) {
                     // Complete signup process
-                    alert('Someyhing went wrong! Please try again.');
+                    alert('Something went wrong! Please try again.');
                     router.push('/');
                   } else {
                     set_error('Please complete all steps including accepting terms of service.');
