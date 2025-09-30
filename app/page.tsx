@@ -34,7 +34,7 @@ export default function Home() {
 
           <button
             className="p-3 text-white bg-blue-500 rounded-md hover:bg-blue-600"
-            onClick={() => alert("Login functionality not implemented")}
+            onClick={() => alert("Login functionality not implemented, please sign up instead")}
           >
             Sign in
           </button>
@@ -62,7 +62,7 @@ export default function Home() {
       </div>
       {/* Dark mode */}
       <button
-        className="absolute px-4 py-2 text-white bg-gray-700 rounded cursor-pointer bottom-4 right-4 hover:bg-gray-800"
+        className="fixed px-4 py-2 text-white bg-gray-700 rounded cursor-pointer bottom-4 right-4 hover:bg-gray-800 z-40"
         onClick={() => set_dark_mode_enabled(!dark_mode_enabled)}
       >
         {dark_mode_enabled ? "Disable" : "Enable"} Dark Mode

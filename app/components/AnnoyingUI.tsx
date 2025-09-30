@@ -8,6 +8,34 @@ export default function AnnoyingUI() {
   const [popup_visible, set_popup_visible] = useState(false);
   const [confetti_pieces, set_confetti_pieces] = useState<Array<{id: number, x: number, delay: number}>>([]);
 
+  // Random cursor setup
+  useEffect(() => {
+    const cursors = [
+      'pointer', 'crosshair', 'move', 'text', 'wait', 'help', 'progress',
+      'not-allowed', 'context-menu', 'cell', 'vertical-text', 'alias',
+      'copy', 'no-drop', 'grab', 'grabbing', 'all-scroll', 'col-resize',
+      'row-resize', 'n-resize', 's-resize', 'e-resize', 'w-resize',
+      'ne-resize', 'nw-resize', 'se-resize', 'sw-resize', 'ew-resize',
+      'ns-resize', 'nesw-resize', 'nwse-resize', 'zoom-in', 'zoom-out'
+    ];
+
+    const applyRandomCursors = () => {
+      const elements = document.querySelectorAll('*');
+      elements.forEach(el => {
+        if (el instanceof HTMLElement) {
+          const randomCursor = cursors[Math.floor(Math.random() * cursors.length)];
+          el.style.cursor = randomCursor;
+        }
+      });
+    };
+
+    // Apply immediately and then every 5 seconds to catch new elements
+    applyRandomCursors();
+    const interval = setInterval(applyRandomCursors, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   // Cookie banner logic
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -121,7 +149,7 @@ export default function AnnoyingUI() {
             </div>
             
             <div className="text-5xl font-extrabold text-yellow-300 mb-4 animate-pulse">
-              iPHONE 8!
+              iPHONE 19 PRO MAX!
             </div>
             
             <div className="text-lg text-white mb-6">
@@ -133,7 +161,6 @@ export default function AnnoyingUI() {
             <button 
               className="bg-gradient-to-r from-green-400 to-blue-500 text-white text-2xl font-bold py-4 px-8 rounded-full border-4 border-yellow-300 animate-bounce hover:scale-110 transform transition-transform"
               onClick={() => {
-                alert("Redirecting to claim your prize... Just kidding! 😄");
                 close_popup();
               }}
             >

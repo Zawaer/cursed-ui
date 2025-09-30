@@ -117,7 +117,7 @@ export default function ForgotUsername() {
 
       {/* Dark mode */}
       <button
-        className="absolute px-4 py-2 text-white bg-gray-700 rounded cursor-pointer bottom-4 right-4 hover:bg-gray-800"
+        className="fixed px-4 py-2 text-white bg-gray-700 rounded cursor-pointer bottom-4 right-4 hover:bg-gray-800 z-40"
         onClick={() => set_dark_mode_enabled(!dark_mode_enabled)}
       >
         {dark_mode_enabled ? "Disable" : "Enable"} Dark Mode
